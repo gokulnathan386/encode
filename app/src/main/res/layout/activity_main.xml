@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<RelativeLayout
+android:id="@+id/header"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="top"
+    >
+
+<TextView
+    android:id="@+id/enter_your_details_headher_title"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/basicimage"
+    android:gravity="left|center"
+    android:lineHeight="35dp"
+    android:textStyle="bold"
+    android:padding="20dp"
+    android:text="Photo Upload"
+    android:textColor="@color/white"
+    android:textSize="30dp" />
+<View
+    android:id="@+id/view"
+    android:layout_width="226dp"
+    android:layout_height="5dp"
+    android:layout_below="@+id/enter_your_details_headher_title"
+    android:layout_marginBottom="10dp"
+    android:background="@color/teal_200" />
+
+<ImageView
+    android:layout_width="25dp"
+    android:layout_height="30dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="25dp"
+    android:src="@drawable/backarrow"></ImageView>
+<ImageView
+    android:layout_width="25dp"
+    android:layout_height="30dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="25dp"
+    android:layout_marginRight="20dp"
+    android:src="@drawable/question"></ImageView>
+
+<LinearLayout
+    android:id="@+id/btnPhoto"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_above="@+id/view"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/roundcircle1"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+</LinearLayout>
+<TextView
+    android:id="@+id/title"
+    android:layout_below="@id/view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Upload your photo"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:lineHeight="21dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:textColor="@color/black"
+    />
+
+<TextView
+    android:id="@+id/subtitle"
+    android:layout_below="@id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="File should be PDF, Jpeg. Max file size 5 MB"
+    android:textSize="14dp"
+    android:lineHeight="21dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:textColor="@color/black"
+    />
+
+
+<RelativeLayout
+    android:id="@+id/showPhotoLayer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/subtitle"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/backgroundshadow"
+    android:orientation="vertical"
+    android:visibility="invisible"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_gravity="bottom|right"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="TextIamge" />
+
+        <LinearLayout
+            android:id="@+id/btndelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right"
+            android:background="@drawable/roundcirclewhite"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/uploadPhotoLayer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/subtitle"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/backgroundshadow"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/takePhoto"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/takephoto"></ImageView>
+
+    <TextView
+        android:id="@+id/Uploadohoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="55dp"
+        android:lineHeight="28.37dp"
+        android:text="Upload Photo"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+</LinearLayout>
+</RelativeLayout>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:gravity="center"
+android:layout_gravity="bottom"
+android:layout_marginBottom="20dp"
+android:layout_marginLeft="20dp"
+android:layout_marginRight="20dp">
+<Button
+    android:id="@+id/enterYourdetailscontinueetailscontinue"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/button_background"
+    android:textAllCaps="false"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:text="Upload Photo" />
+</LinearLayout>
+</LinearLayout>
